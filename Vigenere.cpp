@@ -40,9 +40,7 @@ int main() {
 	cout<<"\nEnter the Mode (1 for encryption & o for decryption): ";
 	cin>>modeInput;
 	
-	transform(input.begin(), input.end(), input.begin(), ::toupper);
-	transform(key.begin(), key.end(), key.begin(), ::toupper);
-		
+	
 	if(modeInput == 1) {
 		output = encrypt(input, key);
 		cout<<"\nEncrypted string is: "<<output<<"\n";	
