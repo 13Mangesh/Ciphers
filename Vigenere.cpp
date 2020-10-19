@@ -39,7 +39,10 @@ int main() {
 	cin>>key;
 	cout<<"\nEnter the Mode (1 for encryption & o for decryption): ";
 	cin>>modeInput;
+	// convert the given input and the key to upper case if it is in lowercase
+	transform(input.begin(),input.end(),input.begin(),::toupper);
 	
+	transform(key.begin(),key.end(),key.begin(),::toupper);
 	
 	if(modeInput == 1) {
 		output = encrypt(input, key);
